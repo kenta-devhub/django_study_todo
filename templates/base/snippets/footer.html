@@ -1,22 +1,23 @@
-<footer class="footer bg-dark">
-    <div class="row">
-        <div class="col-md-2">
-            <h5 class="text-light text-center mt-2">ToDo</h5>
-            <ul class="list-unstyled text-small text-center">
-                <li class="mb-1">
-                    <a href="{% url 'todo:task_list' %}" 
-                    class="link-secondary text-decoration-none">
-                        ToDo一覧
-                    </a>
-                </li>
-                <li class="mb-1">
-                    <a href="{% url 'todo:task_create' %}" 
-                    class="link-secondary text-decoration-none">
-                        ToDo登録
-                    </a>
-                </li>
-            </ul>
-        </div>
+<footer class="bg-dark text-light border-top border-secondary mt-auto" role="contentinfo">
+  <div class="container py-3">
+    <div class="row gy-2">
+      <div class="col-12 col-md-3">
+        <h2 class="h6 text-center text-md-start mb-2">ToDo</h2>
+        <nav aria-label="Footer">
+          <ul class="list-unstyled small text-center text-md-start mb-0">
+            <li class="mb-1">
+              <a href="{% url 'todo:task_list' %}" class="link-light text-decoration-none">ToDo一覧</a>
+            </li>
+            <li class="mb-1">
+              <a href="{% url 'todo:task_create' %}" class="link-light text-decoration-none">ToDo登録</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
+      <div class="col-12 text-center small text-secondary mt-2">
+        &copy; {% now "Y" %} Sample
+      </div>
     </div>
+  </div>
 </footer>

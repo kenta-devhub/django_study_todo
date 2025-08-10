@@ -1,0 +1,9 @@
+/* static/todo/styles.css */
+:root { --navbar-h: 56px; }              /* 実際の高さに合わせて調整 */
+@media (min-width: 992px) {
+  :root { --navbar-h: 58px; }            /* 例: PC時に少し高い場合 */
+}
+body { padding-top: calc(var(--navbar-h) + 8px); }
+
+/* アンカーリンクで見出しが隠れない対策（任意） */
+h1, h2, h3, h4, h5, h6 { scroll-margin-top: var(--navbar-h); }

@@ -1,44 +1,136 @@
-{% extends 'base/base.html' %}
-{% block extend_css %}
+{% extends "base/base.html" %}
 {% load static %}
-{% endblock extend_css %}
+{% block title %}タスク一覧{% endblock %}
+
+{% block extend_css %}
+<link rel="stylesheet" href="{% static 'todo/task/css/list_styles.css' %}">
+{% endblock %}
+
 {% block content %}
-{% if obj %}
-    <div class="table-responsive my-2">
-        <table class="table table-auto table-sm table-striped table-hover">
-            <thead class="table-dark">
-                <tr>
-                    <th>優先度</th>
-                    <th>タイトル</th>
-                    <th>説明</th>
-                    <th>期限</th>
-                    <th>完了</th>
-                    <th>登録者</th>
-                    <th>登録日時</th>
-                    <th>更新日時</th>
-                    <th>詳細</th>
-                    <th>編集</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for o in obj %}
-                <tr>
-                    <td>{% if o.priority == 1 %}低{% elif o.priority == 2 %}中{% elif o.priority == 3 %}高{% endif %}</td>
-                    <td>{{ o.title }}</td>
-                    <td>{{ o.description }}</td>
-                    <td>{{ o.due_date|date:"Y/m/d" }}</td>
-                    <td>{{ o.completed|yesno:"はい,いいえ" }}</td>
-                    <td>{{ o.user }}</td>
-                    <td>{{ o.created_at|date:"Y/m/d H:m" }}</td>
-                    <td>{{ o.updated_at|date:"Y/m/d H:m" }}</td>
-                    <td><a href="{% url 'todo:task_detail' o.id %}">詳細</a></td>
-                    <td><a href="{% url 'todo:task_update' o.id %}">編集</a></td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+
+<!-- ツールバー：検索・完了タブ・ソート -->
+<div class="card mb-3">
+  <div class="card-body">
+    <form method="get" class="row g-2 align-items-center">
+      <!-- 検索 -->
+      <div class="col-12 col-md-5">
+        <div class="input-group">
+          <input type="search" class="form-control" name="q" placeholder="タイトル・説明を検索"
+                 value="{{ q }}">
+          <button class="btn btn-outline-secondary" type="submit">検索</button>
+          {% if q %}
+            <a class="btn btn-outline-secondary" href="?status={{ status }}&sort={{ sort }}&dir={{ dir }}">クリア</a>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- 完了タブ -->
+      <div class="col-12 col-md-4">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link {% if status == 'all' %}active{% endif %}"
+               href="?q={{ q|urlencode }}&status=all&sort={{ sort }}&dir={{ dir }}">
+               すべて <span class="badge text-bg-light">{{ count_all }}</span>
+            </a>
+          </li>
+          <li class="nav-item ms-1">
+            <a class="nav-link {% if status == 'open' %}active{% endif %}"
+               href="?q={{ q|urlencode }}&status=open&sort={{ sort }}&dir={{ dir }}">
+               未完了 <span class="badge text-bg-light">{{ count_open }}</span>
+            </a>
+          </li>
+          <li class="nav-item ms-1">
+            <a class="nav-link {% if status == 'done' %}active{% endif %}"
+               href="?q={{ q|urlencode }}&status=done&sort={{ sort }}&dir={{ dir }}">
+               完了 <span class="badge text-bg-light">{{ count_done }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ソート -->
+      <div class="col-12 col-md-3 text-md-end">
+        <div class="row g-2">
+          <div class="col-8">
+            <select class="form-select form-select-sm" name="sort" onchange="this.form.submit()">
+              <option value="due_date"  {% if sort == 'due_date' %}selected{% endif %}>期限</option>
+              <option value="priority"  {% if sort == 'priority' %}selected{% endif %}>優先度</option>
+              <option value="created_at"{% if sort == 'created_at' %}selected{% endif %}>登録日時</option>
+              <option value="title"     {% if sort == 'title' %}selected{% endif %}>タイトル</option>
+            </select>
+          </div>
+          <div class="col-4">
+            <select class="form-select form-select-sm" name="dir" onchange="this.form.submit()">
+              <option value="asc"  {% if dir == 'asc' %}selected{% endif %}>昇順</option>
+              <option value="desc" {% if dir == 'desc' %}selected{% endif %}>降順</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- 右上：新規作成 -->
+<div class="d-flex flex-wrap gap-2 align-items-center mb-3">
+  <a href="{% url 'todo:task_create' %}" class="btn btn-primary btn-sm ms-auto">新規作成</a>
+</div>
+
+{# 以下、あなたのカード一覧（そのまま） #}
+{% with items=tasks|default:obj %}
+  {% if items %}
+    <div class="row g-3" role="list">
+      {% for t in items %}
+        <div class="col-12 col-md-6 col-lg-4" role="listitem">
+          <article
+            class="card task-item shadow-sm hover-lift
+            {% if t.priority == 1 %}task-accent-low{% elif t.priority == 2 %}task-accent-medium{% else %}task-accent-high{% endif %}
+            {% if not t.completed and t.due_date and today and t.due_date < today %}task-overdue{% endif %}">
+            <div class="card-body">
+              <div class="d-flex align-items-start justify-content-between">
+                <h2 class="h6 mb-2 text-truncate" title="{{ t.title }}">
+                  <a href="{% url 'todo:task_detail' t.pk %}" class="stretched-link text-reset text-decoration-none">
+                    {{ t.title }}
+                  </a>
+                </h2>
+                {% if t.priority == 3 %}
+                  <span class="badge text-bg-danger">高</span>
+                {% elif t.priority == 2 %}
+                  <span class="badge text-bg-primary">中</span>
+                {% else %}
+                  <span class="badge text-bg-secondary">低</span>
+                {% endif %}
+              </div>
+
+              <p class="text-secondary small mb-3 text-truncate-2" title="{{ t.description|default:'' }}">
+                {{ t.description|default:"-" }}
+              </p>
+
+              <div class="d-flex flex-wrap gap-2 small">
+                <span class="badge {% if not t.completed and t.due_date and today and t.due_date < today %}text-bg-danger{% else %}text-bg-light border{% endif %}">
+                  期限: {{ t.due_date|default:"-" }}
+                </span>
+                {% if t.completed %}
+                  <span class="badge text-bg-success">完了</span>
+                {% else %}
+                  <span class="badge text-bg-warning-subtle text-warning-emphasis">未完了</span>
+                {% endif %}
+                <span class="badge text-bg-light border">
+                  登録: {{ t.created_at|date:"Y/m/d H:i" }}
+                </span>
+              </div>
+
+              <div class="d-flex gap-2 mt-3">
+                <a href="{% url 'todo:task_update' t.pk %}" class="btn btn-outline-primary btn-sm">編集</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      {% endfor %}
     </div>
-{% else %}
-    <p class="my-2 text-danger">データがありません</p>
-{% endif %}
+  {% else %}
+    <p class="text-danger my-2">データがありません</p>
+  {% endif %}
+{% endwith %}
+
 {% endblock content %}

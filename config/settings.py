@@ -2,6 +2,7 @@
 from pathlib import Path
 import os
 import environ
+from django.contrib.messages import constants as msg
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,6 +82,10 @@ DATABASES = {
         'PASSWORD': env.str("MYSQL_PASSWORD"),
         'HOST': env.str("MYSQL_HOST"),
         'PORT': env.str("MYSQL_PORT"),
+        "OPTIONS": {
+            "charset": "utf8mb4",
+            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
          "TEST": {"NAME": "test_mydb"},
     }
 }
@@ -120,8 +125,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 # STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles'),]
+STATICFILES_DIRS = [BASE_DIR / "static"]  # プロジェクト直下staticを使う場合
+STATIC_ROOT = BASE_DIR / "staticfiles"    # collectstatic 先（本番で使用）
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -141,6 +151,14 @@ LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "todo:task_list"
 # LOGIN_REDIRECT_URL = "login"
 LOGOUT_REDIRECT_URL = "login"
+
+MESSAGE_TAGS = {
+    msg.DEBUG: "secondary",  # Bootstrap相当
+    msg.INFO: "info",
+    msg.SUCCESS: "success",
+    msg.WARNING: "warning",
+    msg.ERROR: "danger",     # ← ここが重要
+}
 
 LOGGING = {
     'version': 1,  # 設定のバージョン（固定値）

@@ -1,11 +1,14 @@
 import logging
-from django.shortcuts import render
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.urls import reverse_lazy, reverse
-from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
-from ..models import Task
-from ..forms import TaskForm
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse_lazy
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
+from django.contrib.messages.views import SuccessMessageMixin
+
+from ..models.task import Task
+from ..forms.task import TaskForm
+from django.db.models import Q
+from django.utils import timezone
 
 logger = logging.getLogger(__name__)
 
@@ -14,142 +17,196 @@ SORTABLE_FIELDS = {
     "due_date": "due_date",
     "priority": "priority",
     "completed": "completed",
-    "user": "user__username",  # ユーザー名での並び替え
+    # "user": "user__username",  # 全体一覧を作るときに有効化
 }
+
 
 class TaskListView(LoginRequiredMixin, ListView):
     model = Task
-    template_name = 'todo/task/list.html'
-    context_object_name = 'obj'
+    template_name = "todo/task/list.html"
+    context_object_name = "obj"
     paginate_by = 10
-    ordering = ['due_date']
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["header_title"] = "タスク一覧"
-        context["title"] = "タスク"
-        return context
-        
+    ordering = ["due_date"]  # ソート未指定時のデフォルト
+
+    SORTABLE_FIELDS = {
+        "due_date": "due_date",
+        "priority": "priority",
+        "created_at": "created_at",
+        "title": "title",
+    }
+
     def get_queryset(self):
-        qs = super().get_queryset().filter(user=self.request.user).select_related("user")
+        qs = (
+            super()
+            .get_queryset()
+            .filter(user=self.request.user)
+            .select_related("user")
+        )
 
-        sort = self.request.GET.get('sort')
-        direction = self.request.GET.get('dir', 'asc').lower()
+        # --- フィルタ ---
+        q = (self.request.GET.get("q") or "").strip()
+        status = (self.request.GET.get("status") or "all").lower()
 
-        if sort in SORTABLE_FIELDS:
-            field = SORTABLE_FIELDS[sort]
-            if direction == 'desc':
-                field = f'-{field}'
+        if q:
+            qs = qs.filter(Q(title__icontains=q) | Q(description__icontains=q))
+
+        if status == "open":   # 未完
+            qs = qs.filter(completed=False)
+        elif status == "done": # 完了
+            qs = qs.filter(completed=True)
+
+        # --- ソート ---
+        sort = self.request.GET.get("sort") or "due_date"
+        direction = (self.request.GET.get("dir") or "asc").lower()
+        if sort in self.SORTABLE_FIELDS:
+            field = self.SORTABLE_FIELDS[sort]
+            if direction == "desc":
+                field = f"-{field}"
             qs = qs.order_by(field)
-        # sort指定が無効なら self.ordering が適用される
 
         return qs
 
-class TaskCreateView(LoginRequiredMixin, CreateView):
+    def get_context_data(self, **kwargs):
+        ctx = super().get_context_data(**kwargs)
+        # UI反映用に現在値と件数
+        user_qs = Task.objects.filter(user=self.request.user)
+        q = (self.request.GET.get("q") or "").strip()
+        status = (self.request.GET.get("status") or "all").lower()
+
+        ctx["q"] = q
+        ctx["status"] = status
+        ctx["sort"] = self.request.GET.get("sort") or "due_date"
+        ctx["dir"] = (self.request.GET.get("dir") or "asc").lower()
+        ctx["today"] = timezone.localdate()
+
+        ctx["count_all"] = user_qs.count()
+        ctx["count_open"] = user_qs.filter(completed=False).count()
+        ctx["count_done"] = user_qs.filter(completed=True).count()
+        return ctx
+
+
+
+class TaskCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     model = Task
     form_class = TaskForm
-    template_name = 'todo/task/create.html'
-    success_url = reverse_lazy('todo:task_list')
+    template_name = "todo/task/create.html"
+    success_url = reverse_lazy("todo:task_list")
+    success_message = "タスクを登録しました。"
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["header_title"] = "タスク登録"
-        context["title"] = "タスク登録"
-        return context
-    
+        ctx = super().get_context_data(**kwargs)
+        ctx["header_title"] = "タスク登録"
+        ctx["title"] = "タスク登録"
+        return ctx
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        resp = super().form_valid(form)
+        logger.info(
+            "Task created id=%s title=%s by=%s",
+            self.object.pk,
+            self.object.title,
+            getattr(self.request.user, "username", getattr(self.request.user, "email", "unknown")),
+        )
+        return resp
+
     def form_invalid(self, form):
-        response = super().form_invalid(form)
-        print(f"Form error: {form.errors}")
+        logger.error("Task create form invalid errors=%s", dict(form.errors))
         messages.error(self.request, "タスクの登録に失敗しました。")
-        return response
+        return super().form_invalid(form)
 
-    def form_valid(self, form):
-        form.instance.user = self.request.user  # ログインユーザーを設定
-        response = super().form_valid(form)        
-        logger.info(
-            "Task created: %s - %s by %s",
-            form.instance.pk,
-            form.instance.title,
-            getattr(self.request.user, "username", getattr(self.request.user, "email", "unknown")),
-        )
-        return response
 
-class TaskUpdateView(LoginRequiredMixin, UpdateView):
+class TaskUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Task
     form_class = TaskForm
-    template_name = 'todo/task/update.html'
-    context_object_name = 'obj'
-    success_url = reverse_lazy('todo:task_list')
+    template_name = "todo/task/update.html"
+    context_object_name = "obj"
+    success_url = reverse_lazy("todo:task_list")
+    success_message = "タスクを更新しました。"
+
+    # ★ IDOR対策：自分のタスクだけを取得
+    def get_queryset(self):
+        return Task.objects.filter(user=self.request.user)
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["header_title"] = "タスク更新"
-        context["title"] = "タスク更新"
-        return context
+        ctx = super().get_context_data(**kwargs)
+        ctx["header_title"] = "タスク更新"
+        ctx["title"] = "タスク更新"
+        return ctx
 
     def form_valid(self, form):
-        form.instance.user = self.request.user  # ログインユーザーを設定
-        response = super().form_valid(form)
+        # 念のため上書き（owner固定）
+        form.instance.user = self.request.user
+        resp = super().form_valid(form)
         logger.info(
-            "Task updated: %s - %s by %s",
-            form.instance.pk,
-            form.instance.title,
+            "Task updated id=%s title=%s by=%s",
+            self.object.pk,
+            self.object.title,
             getattr(self.request.user, "username", getattr(self.request.user, "email", "unknown")),
         )
-        return response
-    
+        return resp
+
+
 class TaskDetailView(LoginRequiredMixin, DetailView):
     model = Task
-    template_name = 'todo/task/detail.html'
-    context_object_name = 'obj'
+    template_name = "todo/task/detail.html"
+    context_object_name = "obj"
+
+    # ★ IDOR対策
+    def get_queryset(self):
+        return Task.objects.filter(user=self.request.user)
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["header_title"] = "タスク詳細"
-        context["title"] = "タスク詳細"
-        history = self.object.history.all().order_by("-history_date") #type: ignore
+        ctx = super().get_context_data(**kwargs)
+        ctx["header_title"] = "タスク詳細"
+        ctx["title"] = "タスク詳細"
+
+        # 履歴は重くなりがちなのでユーザーをまとめて取得し、件数も適度に制限
+        history_qs = (
+            self.object.history.select_related("history_user")
+            .order_by("-history_date")[:50]
+        )
+
         history_changes = []
-        for record in history:
-            if record.prev_record:
-                diff = record.diff_against(record.prev_record)
-                changes = {
-                    change.field: {"old": change.old, "new": change.new}
-                    for change in diff.changes
-                }
-                history_changes.append(
-                    {
-                        "history_date": record.history_date,
-                        "history_user": record.history_user,
-                        "history_type": record.history_type,
-                        "changes": changes,
-                    }
-                )
+        for record in history_qs:
+            prev = record.prev_record
+            if prev:
+                diff = record.diff_against(prev)
+                changes = {c.field: {"old": c.old, "new": c.new} for c in diff.changes}
             else:
-                history_changes.append(
-                    {
-                        "history_date": record.history_date,
-                        "history_user": record.history_user,
-                        "history_type": record.history_type,
-                        "changes": None,
-                    }
-                )
+                changes = None
+            history_changes.append(
+                {
+                    "history_date": record.history_date,
+                    "history_user": record.history_user,
+                    "history_type": record.history_type,
+                    "changes": changes,
+                }
+            )
 
-        context["history_changes"] = history_changes
-        return context
+        ctx["history_changes"] = history_changes
+        return ctx
 
 
-class TaskDeleteView(LoginRequiredMixin, DeleteView):
+class TaskDeleteView(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = Task
-    template_name = 'todo/task/confirm_delete.html'
-    context_object_name = 'obj'
-    success_url = reverse_lazy('todo:task_list')
+    template_name = "todo/task/confirm_delete.html"
+    context_object_name = "obj"
+    success_url = reverse_lazy("todo:task_list")
+    success_message = "タスクを削除しました。"
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["header_title"] = "タスク削除"
-        context["title"] = "タスク削除"
-        return context
+    # ★ IDOR対策
+    def get_queryset(self):
+        return Task.objects.filter(user=self.request.user)
 
+    def delete(self, request, *args, **kwargs):
+        obj = self.get_object()
+        logger.warning("Task deleted id=%s title=%s by=%s", obj.id, obj.title, request.user)
+        messages.success(request, self.success_message)
+        return super().delete(request, *args, **kwargs)
+
+
+# 関数エイリアス（URL confで使うならそのままでもOK）
 task_list = TaskListView.as_view()
 task_create = TaskCreateView.as_view()
 task_update = TaskUpdateView.as_view()
