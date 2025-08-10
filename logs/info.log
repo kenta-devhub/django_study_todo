@@ -627,3 +627,892 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'task_detail' not found. 'tas
 [INFO] 2025-08-10 11:47:51,628 todo.views.task: Task created: 1 - New Task by alice
 [INFO] 2025-08-10 11:47:51,643 todo.views.task: Task created: 2 - New Task by alice
 [INFO] 2025-08-10 11:47:51,658 todo.views.task: Task created: 3 - New Task by alice
+[INFO] 2025-08-10 11:51:12,084 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 11:51:12,462 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:51:21,735 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 11:51:22,673 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:51:26,965 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 11:51:27,510 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:51:57,040 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 11:51:57,425 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:04,019 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:04,530 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:06,736 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:07,195 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:11,415 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:12,230 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:16,478 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:16,858 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:20,035 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:20,519 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:22,768 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:23,121 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:25,310 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:25,632 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:27,788 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:28,135 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:37,442 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:37,971 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:41,177 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:41,824 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:43,156 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:43,503 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:48,738 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:49,179 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:51,391 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:51,838 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:02:55,119 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:02:55,463 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:03:03,703 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:03:04,087 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:03:07,311 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:03:07,792 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:03:14,030 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:03:14,398 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:03:15,607 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 12:03:15,964 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:07:08,281 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:07:08,743 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:07:14,097 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:07:14,454 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:07:16,637 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:07:17,015 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:07:22,217 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:07:22,603 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:07:31,805 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:07:32,155 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:07:34,398 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:07:34,774 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:07:39,958 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:07:40,333 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:22,868 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:23,872 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:25,283 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:25,729 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:29,967 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:30,400 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:33,612 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:34,007 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:37,276 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:38,205 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:40,668 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:41,176 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:45,452 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:45,850 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:48,081 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:48,611 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:49,921 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:50,393 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:51,626 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:52,157 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:57,535 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:58,009 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:08:59,300 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:08:59,709 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:09:07,119 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:09:07,593 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:09:08,933 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:09:09,341 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:09:20,701 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:09:21,262 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:09:35,672 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:09:36,086 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-10 12:09:39,576 django.request: Internal Server Error: /todo/create/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_invalid(form)
+  File "/home/ken/study/django/todo/todo/views/task.py", line 63, in form_invalid
+    messages.error("タスクの登録に失敗しました。")
+TypeError: error() missing 1 required positional argument: 'message'
+[INFO] 2025-08-10 12:10:04,761 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:10:05,595 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:10:21,027 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:10:21,509 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 12:11:57,620 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:11:58,042 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-10 12:12:01,451 django.request: Internal Server Error: /todo/create/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_invalid(form)
+  File "/home/ken/study/django/todo/todo/views/task.py", line 62, in form_invalid
+    print(f"Form error: {form.due_date.errors}")
+AttributeError: 'TaskForm' object has no attribute 'due_date'
+[INFO] 2025-08-10 12:12:06,412 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 12:12:06,809 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 13:58:00,478 todo.views.task: Task created: 2 - test02 by ken
+[INFO] 2025-08-10 13:58:51,184 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 13:58:52,152 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 13:58:54,366 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 13:58:54,706 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 13:58:56,922 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 13:58:57,307 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 13:58:59,526 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 13:58:59,902 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 13:59:13,209 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 13:59:13,578 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:01:24,911 django.utils.autoreload: /home/ken/study/django/todo/todo/urls.py changed, reloading.
+[INFO] 2025-08-10 14:01:25,365 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:02:20,034 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:02:20,567 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:02:22,841 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:02:23,328 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:02:28,613 django.utils.autoreload: /home/ken/study/django/todo/todo/urls.py changed, reloading.
+[INFO] 2025-08-10 14:02:29,024 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:05:02,607 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:05:03,059 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:06:28,613 todo.views.task: Task created: 3 - test by ken
+[INFO] 2025-08-10 14:08:11,484 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:09:13,319 django.utils.autoreload: /home/ken/study/django/todo/todo/models/task.py changed, reloading.
+[INFO] 2025-08-10 14:09:13,774 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:09:15,013 django.utils.autoreload: /home/ken/study/django/todo/todo/models/task.py changed, reloading.
+[INFO] 2025-08-10 14:09:15,452 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:09:23,817 django.utils.autoreload: /home/ken/study/django/todo/todo/models/task.py changed, reloading.
+[INFO] 2025-08-10 14:09:24,200 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:09:59,790 django.utils.autoreload: /home/ken/study/django/todo/todo/admin.py changed, reloading.
+[INFO] 2025-08-10 14:10:00,151 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:10:02,375 django.utils.autoreload: /home/ken/study/django/todo/todo/admin.py changed, reloading.
+[INFO] 2025-08-10 14:10:02,790 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-10 14:10:53,093 django.request: Internal Server Error: /admin/todo/task/3/delete/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2207, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2242, in _delete_view
+    self.log_deletions(request, [obj])
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1018, in log_deletions
+    return LogEntry.objects.log_actions(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/models.py", line 98, in log_actions
+    instance.save()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+[ERROR] 2025-08-10 14:11:01,350 django.request: Internal Server Error: /admin/todo/task/3/delete/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2207, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2242, in _delete_view
+    self.log_deletions(request, [obj])
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1018, in log_deletions
+    return LogEntry.objects.log_actions(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/models.py", line 98, in log_actions
+    instance.save()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+[ERROR] 2025-08-10 14:11:17,139 django.request: Internal Server Error: /admin/todo/task/1/delete/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2207, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2242, in _delete_view
+    self.log_deletions(request, [obj])
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1018, in log_deletions
+    return LogEntry.objects.log_actions(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/models.py", line 98, in log_actions
+    instance.save()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+[ERROR] 2025-08-10 14:11:23,082 django.request: Internal Server Error: /admin/todo/task/1/delete/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2207, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2242, in _delete_view
+    self.log_deletions(request, [obj])
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1018, in log_deletions
+    return LogEntry.objects.log_actions(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/models.py", line 98, in log_actions
+    instance.save()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+[INFO] 2025-08-10 14:11:53,270 django.utils.autoreload: /home/ken/study/django/todo/todo/admin.py changed, reloading.
+[INFO] 2025-08-10 14:11:53,904 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:11:55,064 django.utils.autoreload: /home/ken/study/django/todo/todo/admin.py changed, reloading.
+[INFO] 2025-08-10 14:11:55,451 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:11:56,605 django.utils.autoreload: /home/ken/study/django/todo/todo/admin.py changed, reloading.
+[INFO] 2025-08-10 14:11:56,963 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:11:58,118 django.utils.autoreload: /home/ken/study/django/todo/todo/admin.py changed, reloading.
+[INFO] 2025-08-10 14:11:58,522 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-10 14:12:09,412 django.request: Internal Server Error: /admin/todo/task/3/delete/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2207, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2242, in _delete_view
+    self.log_deletions(request, [obj])
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1018, in log_deletions
+    return LogEntry.objects.log_actions(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/models.py", line 98, in log_actions
+    instance.save()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+[ERROR] 2025-08-10 14:19:16,467 django.request: Internal Server Error: /admin/todo/task/3/delete/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2207, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 2242, in _delete_view
+    self.log_deletions(request, [obj])
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/options.py", line 1018, in log_deletions
+    return LogEntry.objects.log_actions(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/admin/models.py", line 98, in log_actions
+    instance.save()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 902, in save
+    self.save_base(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1008, in save_base
+    updated = self._save_table(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1169, in _save_table
+    results = self._do_insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1210, in _do_insert
+    return manager._insert(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1868, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1882, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1366, "Incorrect integer value: 'ef96d246b1a24041861ed4f9992bc383' for column 'user_id' at row 1")
+[INFO] 2025-08-10 14:20:38,394 todo.views.task: Task created: 4 - test001 by admin
+[INFO] 2025-08-10 14:20:47,598 todo.views.task: Task updated: 4 - test001 by admin
+[ERROR] 2025-08-10 14:21:42,791 django.request: Internal Server Error: /todo/list/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' o.priority == "1"' from 'if o.priority == "1"'
+[ERROR] 2025-08-10 14:21:55,979 django.request: Internal Server Error: /todo/list/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 710, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' o.priority == "1"' from 'if o.priority == "1"'
+[ERROR] 2025-08-10 14:25:44,450 django.request: Internal Server Error: /todo/detail/4/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'scheduler'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'scheduler' is not a registered namespace
+[INFO] 2025-08-10 14:27:32,260 django.utils.autoreload: /home/ken/study/django/todo/todo/urls.py changed, reloading.
+[INFO] 2025-08-10 14:27:32,706 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:27:48,991 django.utils.autoreload: /home/ken/study/django/todo/todo/urls.py changed, reloading.
+[INFO] 2025-08-10 14:27:49,347 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:28:22,835 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:28:23,283 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:28:25,513 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:28:26,009 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:28:30,231 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:28:30,637 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:28:40,964 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:28:41,351 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:28:42,541 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:28:42,924 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:28:45,229 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:28:45,743 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:28:48,935 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:28:49,289 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:28:50,477 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:28:50,837 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:28:55,056 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:28:55,483 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-10 14:29:11,084 django.request: Internal Server Error: /todo/delete/4/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: todo/task/confirm_delete.html
+[WARNING] 2025-08-10 14:29:39,567 django.request: Method Not Allowed (POST): /todo/delete/4/
+[INFO] 2025-08-10 14:31:00,956 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 14:31:01,388 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 14:33:21,420 todo.views.task: Task updated: 1 - Updated Title by alice
+[INFO] 2025-08-10 14:33:21,445 todo.views.task: Task updated: 1 - Updated Title by alice
+[INFO] 2025-08-10 14:33:21,458 todo.views.task: Task updated: 1 - Updated Title by alice
+[INFO] 2025-08-10 17:12:57,241 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-10 17:13:02,416 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-10 17:13:25,700 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-10 17:22:29,971 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 17:22:31,190 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 17:22:32,702 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 17:22:33,370 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 17:22:42,795 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 17:22:43,911 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 17:25:36,643 todo.views.task: Task created: 5 - test02 by admin
+[INFO] 2025-08-10 17:26:25,805 todo.views.task: Task updated: 5 - test02 by admin
+[INFO] 2025-08-10 17:27:10,828 todo.views.task: Task updated: 5 - test022 by admin
+[INFO] 2025-08-10 17:27:19,984 todo.views.task: Task updated: 5 - test022 by admin

@@ -1,0 +1,127 @@
+{% extends 'base/base.html' %}
+{% block extend_css %}
+{% load static %}
+{% endblock extend_css %}
+{% block content %}
+<div class="row m-2">
+    <div class="card col-md-6">
+        <h5 class="card-header text-center text-secondary mt-1 bg-white border-bottom">製品詳細</h5>
+        <div class="row my-sm-4 justify-content-center">
+            <label for="inputTitle" class="col-md-2 col-form-label">タイトル</label>
+            <div class="col-md-6">
+                <input type="text"
+                        name="title"
+                        class="form-control"
+                        id="inputTitle"
+                        value="{{ obj.title}}"
+                        disabled>
+            </div>
+        </div>
+        <div class="row my-sm-4 justify-content-center">
+            <label for="inputDescription" class="col-md-2 col-form-label">説明</label>
+            <div class="col-md-6">
+                <textarea name="description"
+                            class="form-control"
+                            id="inputDescription"
+                            disabled>{{ obj.description}}
+                </textarea>
+            </div>
+        </div>
+        <div class="row my-sm-4 justify-content-center">
+            <label for="inputDueDate" class="col-md-2 col-form-label">期限</label>
+            <div class="col-md-6">
+                <input type="date"
+                        name="due_date"
+                        class="form-control{% if form.due_date.errors %} is-invalid{% endif %}"
+                        id="inputDueDate"
+                        value="{{ obj.due_date|date:'Y-m-d' }}"
+                        disabled>
+            </div>
+        </div>
+        <div class="row my-sm-4 justify-content-center">
+            <label for="inputPriority" class="col-md-2 col-form-label">優先度</label>
+            <div class="col-md-6">
+                <input type="text"
+                        name="priority"
+                        class="form-control{% if form.priority.errors %} is-invalid{% endif %}"
+                        id="inputPriority"
+                        value="{% if obj.priority == 1 %}低{% elif obj.priority == 2 %}中{% elif obj.priority == 3 %}高{% endif %}"
+                        disabled>
+            </div>
+        </div>
+        <div class="row my-sm-4 justify-content-center">
+            <label for="inputCompleted" class="col-md-2 col-form-label">完了</label>
+            <div class="col-md-6">
+                <input type="text"
+                        name="completed"
+                        class="form-control"
+                        id="inputCompleted"
+                        value="{% if obj.completed %}完了{% else %}未完了{% endif %}"
+                        disabled>
+            </div>
+        </div>
+        <div class="row my-4 px-0 justify-content-center">
+            <a class="col-md-2 mx-md-1 my-1 btn btn-primary btn-lg" href="{% url 'todo:task_update' obj.id %}">編集</a>
+            <a class="col-md-2 mx-md-1 my-1 btn btn-danger btn-lg" href="{% url 'todo:task_delete' obj.id %}">削除</a>
+            <a class="col-md-2 mx-md-1 my-1 btn btn-secondary btn-lg" onclick="window.history.back();">戻る</a>
+        </div>
+    </div>
+        <div class="sidebar card col-md-6">
+            <h5 class="card-header text-center text-secondary mt-1 bg-white border-bottom">変更履歴</h5>
+            <div class="table-responsive my-sm-4 justify-content-center">
+                <table class="table table-auto table-sm table-striped table-hover border">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="text-center">更新日時</th>
+                            <th class="text-center">更新者</th>
+                            <th class="text-center">項目</th>
+                            <th class="text-center">内容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for record in history_changes %}
+                        <tr>
+                            <td class="text-center" style="max-width: 10px;">{{ record.history_date|date:"Y/m/d H:i:s" }}</td>
+                            <td class="text-center" style="max-width: 10px;">{{ record.history_user|default:"システム" }}</td>
+                            <td class="text-center" style="max-width: 5px;">
+                                {% if record.history_type == '+' %}
+                                    追加
+                                {% elif record.history_type == '~' %}
+                                    更新
+                                {% elif record.history_type == '-' %}
+                                    削除
+                                {% else %}
+                                    不明
+                                {% endif %}
+                                {% if record.history_change_reason %}
+                                    ({{ record.history_change_reason }})
+                                {% endif %}
+                            </td>
+                            {% if record.changes %}
+                            <td class="text-center wrap-text" style="max-width: 150px;">
+                                {% for field, change in record.changes.items %}
+                                    {% if field == 'due_date' %}
+                                    {{ field }}: {{ change.old|date:"Y/m/d" }} → {{ change.new|date:"Y/m/d" }}<br>
+                                    {% else %}
+                                    {{ field }}: {{ change.old }} → {{ change.new }}<br>
+                                    {% endif %}
+                                {% endfor %}
+                            </td>
+                            {% elif record.history_type == '+' %}
+                            <td class="text-center">新規登録</td>
+                            {% else %}
+                            <td class="text-center">変更なし</td>
+                            {% endif %}
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td class="text-center">変更履歴はありません</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -23,7 +23,7 @@
             <tbody>
                 {% for o in obj %}
                 <tr>
-                    <td>{{ o.priority }}</td>
+                    <td>{% if o.priority == 1 %}低{% elif o.priority == 2 %}中{% elif o.priority == 3 %}高{% endif %}</td>
                     <td>{{ o.title }}</td>
                     <td>{{ o.description }}</td>
                     <td>{{ o.due_date|date:"Y/m/d" }}</td>
@@ -31,8 +31,8 @@
                     <td>{{ o.user }}</td>
                     <td>{{ o.created_at|date:"Y/m/d H:m" }}</td>
                     <td>{{ o.updated_at|date:"Y/m/d H:m" }}</td>
-                    {% comment %} <td><a href="{% url 'todo:task_detail' o.id %}">詳細</a></td>
-                    <td><a href="{% url 'todo:task_update' o.id %}">編集</a></td> {% endcomment %}
+                    <td><a href="{% url 'todo:task_detail' o.id %}">詳細</a></td>
+                    <td><a href="{% url 'todo:task_update' o.id %}">編集</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

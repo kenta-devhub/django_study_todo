@@ -1,0 +1,67 @@
+{% extends 'base/base.html' %}
+{% block extend_css %}
+{% load static %}
+{% endblock extend_css %}
+{% block content %}
+<p class="text-center mb-4">以下のデータを削除してもよろしいですか？</p>
+<div class="row my-sm-4 justify-content-center">
+    <label for="inputTitle" class="col-md-2 col-form-label">タイトル</label>
+    <div class="col-md-6">
+        <input type="text"
+                name="title"
+                class="form-control"
+                id="inputTitle"
+                value="{{ obj.title}}"
+                disabled>
+    </div>
+</div>
+<div class="row my-sm-4 justify-content-center">
+    <label for="inputDescription" class="col-md-2 col-form-label">説明</label>
+    <div class="col-md-6">
+        <textarea name="description"
+                    class="form-control"
+                    id="inputDescription"
+                    disabled>{{ obj.description}}
+        </textarea>
+    </div>
+</div>
+<div class="row my-sm-4 justify-content-center">
+    <label for="inputDueDate" class="col-md-2 col-form-label">期限</label>
+    <div class="col-md-6">
+        <input type="date"
+                name="due_date"
+                class="form-control{% if form.due_date.errors %} is-invalid{% endif %}"
+                id="inputDueDate"
+                value="{{ obj.due_date|date:'Y-m-d' }}"
+                disabled>
+    </div>
+</div>
+<div class="row my-sm-4 justify-content-center">
+    <label for="inputPriority" class="col-md-2 col-form-label">優先度</label>
+    <div class="col-md-6">
+        <select name="priority" class="form-control" id="inputPriority" disabled>
+            <option value="1" {% if obj.priority == "1" %}selected{% endif %}>低</option>
+            <option value="2" {% if obj.priority == "2" %}selected{% endif %}>中</option>
+            <option value="3" {% if obj.priority == 3 %}selected{% endif %}>高</option>
+        </select>
+    </div>
+</div>
+<div class="row my-sm-4 justify-content-center">
+    <label for="inputCompleted" class="col-md-2 col-form-label">完了</label>
+    <div class="col-md-6">
+        <input type="checkbox"
+                name="completed"
+                class="form-check-input"
+                id="inputCompleted"
+                {% if obj.completed %}checked{% endif %}
+                disabled>
+    </div>
+</div>
+<form method="POST">
+    {% csrf_token %}
+    <div class="row my-5 px-0 justify-content-center">
+        <button type="submit" class="col-sm-1 mx-sm-3 my-1 btn btn-primary btn-lg">削除</button>
+        <a class="col-sm-1 mx-sm-3 my-1 btn btn-secondary btn-lg" onclick="window.history.back();">戻る</a>
+    </div>
+</form>
+{% endblock content %}

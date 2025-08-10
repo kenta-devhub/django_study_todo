@@ -23,7 +23,7 @@ class Task(models.Model):
     history = HistoricalRecords()
 
     def __str__(self):
-        return f"タイトル:{self.title} - 状態:{'完了' if self.completed else '未完了'} - 期限:{self.due_date}"
+        return f"タイトル:{self.title} - 状態:{'完了' if self.completed else '未完了'} - 期限:{self.due_date} - 投稿者:{self.user.username}"
 
     class Meta:
         ordering = ['completed', 'priority', 'due_date', "-id"]
