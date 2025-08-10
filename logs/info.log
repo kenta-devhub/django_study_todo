@@ -1,0 +1,629 @@
+[INFO] 2025-08-09 09:47:29,997 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-09 09:47:34,166 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-09 09:47:38,289 django.request: Not Found: /
+[INFO] 2025-08-09 18:22:20,927 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-09 18:23:10,954 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-09 18:23:12,835 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-09 18:23:18,202 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-09 18:23:18,716 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-09 18:23:39,081 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-09 18:25:45,786 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-09 18:25:50,684 django.request: Not Found: /favicon.ico
+[ERROR] 2025-08-09 18:26:02,400 django.request: Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/ken/study/django/todo/accounts/views.py", line 22, in form_valid
+    return super().form_valid(form)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 109, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 41, in get_success_url
+    return self.get_redirect_url() or self.get_default_redirect_url()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 96, in get_default_redirect_url
+    return resolve_url(settings.LOGIN_REDIRECT_URL)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/shortcuts.py", line 184, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'list' not found. 'list' is not a valid view function or pattern name.
+[INFO] 2025-08-09 18:26:29,247 django.utils.autoreload: /home/ken/study/django/todo/config/settings.py changed, reloading.
+[INFO] 2025-08-09 18:26:30,930 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-09 18:26:34,380 django.security.csrf: Forbidden (CSRF token from POST incorrect.): /login/
+[ERROR] 2025-08-09 18:26:45,650 django.request: Internal Server Error: /todo/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'todo.todo_task' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 178, in get
+    context = self.get_context_data()
+  File "/home/ken/study/django/todo/todo/views/task.py", line 27, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 128, in get_context_data
+    paginator, page, queryset, is_paginated = self.paginate_queryset(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 73, in paginate_queryset
+    page = paginator.page(page_number)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 89, in page
+    number = self.validate_number(number)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 70, in validate_number
+    if number > self.num_pages:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 116, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'todo.todo_task' doesn't exist")
+[INFO] 2025-08-09 18:27:07,561 django.utils.autoreload: /home/ken/study/django/todo/todo/urls.py changed, reloading.
+[INFO] 2025-08-09 18:27:08,527 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-09 18:27:10,453 django.request: Not Found: /todo/
+[ERROR] 2025-08-09 18:27:20,705 django.request: Internal Server Error: /todo/list
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'todo.todo_task' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 178, in get
+    context = self.get_context_data()
+  File "/home/ken/study/django/todo/todo/views/task.py", line 27, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 128, in get_context_data
+    paginator, page, queryset, is_paginated = self.paginate_queryset(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 73, in paginate_queryset
+    page = paginator.page(page_number)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 89, in page
+    number = self.validate_number(number)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 70, in validate_number
+    if number > self.num_pages:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 116, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'todo.todo_task' doesn't exist")
+[WARNING] 2025-08-09 18:27:25,224 django.request: Not Found: /todo/list/
+[INFO] 2025-08-09 18:27:34,552 django.utils.autoreload: /home/ken/study/django/todo/todo/urls.py changed, reloading.
+[INFO] 2025-08-09 18:27:35,441 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-09 18:27:36,457 django.request: Internal Server Error: /todo/list/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'todo.todo_task' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 178, in get
+    context = self.get_context_data()
+  File "/home/ken/study/django/todo/todo/views/task.py", line 27, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 128, in get_context_data
+    paginator, page, queryset, is_paginated = self.paginate_queryset(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 73, in paginate_queryset
+    page = paginator.page(page_number)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 89, in page
+    number = self.validate_number(number)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 70, in validate_number
+    if number > self.num_pages:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 116, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'todo.todo_task' doesn't exist")
+[INFO] 2025-08-09 18:28:00,975 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-09 18:28:07,128 django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 259, in get
+    url = self.get_redirect_url(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 249, in get_redirect_url
+    url = reverse(self.pattern_name, args=args, kwargs=kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'list' not found. 'list' is not a valid view function or pattern name.
+[INFO] 2025-08-09 18:28:23,864 django.utils.autoreload: /home/ken/study/django/todo/config/urls.py changed, reloading.
+[INFO] 2025-08-09 18:28:24,544 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-09 18:28:27,504 django.request: Internal Server Error: /todo/list/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'todo.todo_task' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 178, in get
+    context = self.get_context_data()
+  File "/home/ken/study/django/todo/todo/views/task.py", line 27, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 128, in get_context_data
+    paginator, page, queryset, is_paginated = self.paginate_queryset(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/list.py", line 73, in paginate_queryset
+    page = paginator.page(page_number)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 89, in page
+    number = self.validate_number(number)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 70, in validate_number
+    if number > self.num_pages:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 116, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/MySQLdb/connections.py", line 280, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'todo.todo_task' doesn't exist")
+[INFO] 2025-08-09 18:29:38,999 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-09 18:29:45,760 django.request: Internal Server Error: /todo/list/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: todo/task_list.html, todo/task_list.html
+[INFO] 2025-08-09 18:30:09,690 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-09 18:30:11,765 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-09 18:30:13,395 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-09 18:30:14,050 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-09 18:30:15,992 django.request: Internal Server Error: /todo/list/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/base.py", line 81, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'scheduler'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/base.py", line 92, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'scheduler' is not a registered namespace
+[ERROR] 2025-08-09 18:31:02,042 django.request: Internal Server Error: /todo/list/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 173, in render
+    return self._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'list' not found. 'list' is not a valid view function or pattern name.
+[INFO] 2025-08-09 19:24:34,657 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-09 19:30:25,022 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[INFO] 2025-08-10 11:32:19,767 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-10 11:32:25,852 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-10 11:36:55,503 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 11:36:55,886 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:37:17,263 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 11:37:17,611 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:37:44,035 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 11:37:44,353 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:37:46,625 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 11:37:46,970 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:37:54,258 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 11:37:54,745 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:38:08,118 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 11:38:08,593 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:38:10,808 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-10 11:38:11,164 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:41:41,152 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 11:41:41,576 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:41:42,856 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 11:41:43,229 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:41:54,510 django.utils.autoreload: /home/ken/study/django/todo/todo/forms/task.py changed, reloading.
+[INFO] 2025-08-10 11:41:54,897 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-10 11:43:10,087 todo.views.task: Task created: 1 - test by ken
+[ERROR] 2025-08-10 11:43:10,201 django.request: Internal Server Error: /todo/list/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'task_detail' not found. 'task_detail' is not a valid view function or pattern name.
+[INFO] 2025-08-10 11:47:51,628 todo.views.task: Task created: 1 - New Task by alice
+[INFO] 2025-08-10 11:47:51,643 todo.views.task: Task created: 2 - New Task by alice
+[INFO] 2025-08-10 11:47:51,658 todo.views.task: Task created: 3 - New Task by alice

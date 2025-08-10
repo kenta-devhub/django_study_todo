@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ログイン</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/css/login_styles.css' %}">
+  </head>
+  <body>
+    <main class="d-flex flex-column align-items-center justify-content-center bg-dark vh-100">
+      <div class="form-container text-secondary">
+        <form method="POST" action="{% url form_type %}" class="w-100">
+          {% csrf_token %}
+          <h1 class="h3 mb-3 fw-normal css-test">Please {{ form_type }}</h1>
+          {% if form_type == 'signup' %}
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                name="username"
+                class="form-control"
+                id="floatingUsername"
+                placeholder="ユーザー名を入力してください"
+                autocomplete="username"
+                required
+              />
+              <label for="floatingUsername">ユーザー名</label>
+            </div>
+          {% endif %}
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              name="{% if form_type == 'login' %}username{% elif form_type == 'signup'%}email{% endif %}"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+              autocomplete="email"
+              autofocus
+              required
+            />
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Password"
+              autocomplete="new-password"
+              required
+            />
+            <label for="floatingPassword">Password</label>
+          </div>
+          {% if form_type == 'signup' %}
+            <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  name="password2"
+                  class="form-control"
+                  id="floatingPassword2"
+                  placeholder="CheckPassword"
+                  autocomplete="new-password"
+                  required
+                />
+                <label for="floatingPassword2">Check Password</label>
+            </div>
+          {% endif %}
+          <button class="btn btn-primary w-100 py-2" type="submit">
+            {% if form_type == 'login' %}
+              Login
+            {% elif form_type == 'signup' %}
+              Signup
+            {% endif %}
+          </button>
+        </form>
+        {% if form_type == 'login' %}
+        <div class="d-flex justify-content-end align-items-center mt-2">
+          <a href="{% url 'signup' %}" class="text-secondary">新規登録はこちら</a>
+        </div>
+        {% endif %}
+    </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>

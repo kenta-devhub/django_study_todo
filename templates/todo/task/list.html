@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+{% block extend_css %}
+{% load static %}
+{% endblock extend_css %}
+{% block content %}
+{% if obj %}
+    <div class="table-responsive my-2">
+        <table class="table table-auto table-sm table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>優先度</th>
+                    <th>タイトル</th>
+                    <th>説明</th>
+                    <th>期限</th>
+                    <th>完了</th>
+                    <th>登録者</th>
+                    <th>登録日時</th>
+                    <th>更新日時</th>
+                    <th>詳細</th>
+                    <th>編集</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for o in obj %}
+                <tr>
+                    <td>{{ o.priority }}</td>
+                    <td>{{ o.title }}</td>
+                    <td>{{ o.description }}</td>
+                    <td>{{ o.due_date|date:"Y/m/d" }}</td>
+                    <td>{{ o.completed|yesno:"はい,いいえ" }}</td>
+                    <td>{{ o.user }}</td>
+                    <td>{{ o.created_at|date:"Y/m/d H:m" }}</td>
+                    <td>{{ o.updated_at|date:"Y/m/d H:m" }}</td>
+                    {% comment %} <td><a href="{% url 'todo:task_detail' o.id %}">詳細</a></td>
+                    <td><a href="{% url 'todo:task_update' o.id %}">編集</a></td> {% endcomment %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% else %}
+    <p class="my-2 text-danger">データがありません</p>
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,52 @@
+{% if page_obj.has_other_pages %}
+  <nav aria-label="Page navigation" class="pagination-container">
+    <ul class="pagination justify-content-center">
+
+      <!-- 最初のページへのリンク -->
+      <li class="page-item {% if page_obj.number == 1 %}disabled{% endif %}">
+        <a class="page-link" href="?page=1" aria-label="First">先頭</a>
+      </li>
+
+      <!-- 前のページへのリンク -->
+      {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">&laquo;</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">&laquo;</span>
+        </li>
+      {% endif %}
+
+      <!-- 現在のページから前後5ページ分を表示 -->
+      {% for i in page_obj.paginator.page_range %}
+        {% if i >= page_obj.number|add:-5 and i <= page_obj.number|add:5 %}
+          <li class="page-item {% if page_obj.number == i %}active{% endif %}">
+            {% if page_obj.number == i %}
+              <span class="page-link" aria-current="page">{{ i }}</span>
+            {% else %}
+              <a class="page-link" href="?page={{ i }}" aria-label="Page {{ i }}">{{ i }}</a>
+            {% endif %}
+          </li>
+        {% endif %}
+      {% endfor %}
+
+      <!-- 次のページへのリンク -->
+      {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Next">&raquo;</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">&raquo;</span>
+        </li>
+      {% endif %}
+
+      <!-- 最後のページへのリンク -->
+      <li class="page-item {% if page_obj.number == page_obj.paginator.num_pages %}disabled{% endif %}">
+        <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last">最後</a>
+      </li>
+
+    </ul>
+  </nav>
+{% endif %}

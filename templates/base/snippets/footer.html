@@ -1,0 +1,22 @@
+<footer class="footer bg-dark">
+    <div class="row">
+        <div class="col-md-2">
+            <h5 class="text-light text-center mt-2">ToDo</h5>
+            <ul class="list-unstyled text-small text-center">
+                <li class="mb-1">
+                    <a href="{% url 'todo:task_list' %}" 
+                    class="link-secondary text-decoration-none">
+                        ToDo一覧
+                    </a>
+                </li>
+                <li class="mb-1">
+                    <a href="{% url 'todo:task_create' %}" 
+                    class="link-secondary text-decoration-none">
+                        ToDo登録
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
