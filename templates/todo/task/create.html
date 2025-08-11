@@ -1,65 +1,108 @@
 {% extends 'base/base.html' %}
-{% block extend_css %}
-{% load static %}
-{% endblock extend_css %}
 {% block content %}
-<form action="{% url 'todo:task_create' %}" method="post">
-    {% csrf_token %}
-    <div class="row my-sm-4 justify-content-center">
-        <label for="inputTitle" class="col-md-2 col-form-label">タイトル</label>
-        <div class="col-md-6">
-            <input type="text"
-                   name="title"
-                   class="form-control"
-                   id="inputTitle"
-                   value="{{ form.data.title|default_if_none:'' }}">
-        </div>
+
+<form action="{% url 'todo:task_create' %}" method="post" novalidate>
+  {% csrf_token %}
+
+  {# フォーム全体のエラー（例：クロスフィールド検証） #}
+  {% if form.non_field_errors %}
+    <div class="alert alert-danger mb-3">
+      {% for e in form.non_field_errors %}{{ e }}<br>{% endfor %}
     </div>
-    <div class="row my-sm-4 justify-content-center">
-        <label for="inputDescription" class="col-md-2 col-form-label">説明</label>
-        <div class="col-md-6">
-            <textarea name="description"
-                      class="form-control"
-                      id="inputDescription">{{ form.data.description|default_if_none:'' }}
-            </textarea>
-        </div>
+  {% endif %}
+
+  <div class="row my-sm-4 justify-content-center">
+    <label for="{{ form.title.id_for_label }}" class="col-md-2 col-form-label">タイトル</label>
+    <div class="col-md-6">
+      <input
+        type="text"
+        name="{{ form.title.name }}"
+        id="{{ form.title.id_for_label }}"
+        class="form-control{% if form.title.errors %} is-invalid{% endif %}"
+        value="{{ form.title.value|default_if_none:'' }}"
+        required
+      >
+      {% for error in form.title.errors %}
+        <div class="invalid-feedback">{{ error }}</div>
+      {% endfor %}
     </div>
-    <div class="row my-sm-4 justify-content-center">
-        <label for="inputDueDate" class="col-md-2 col-form-label">期限</label>
-        <div class="col-md-6">
-            <input type="date"
-                   name="due_date"
-                   class="form-control{% if form.due_date.errors %} is-invalid{% endif %}"
-                   id="inputDueDate"
-                   value="{{ form.data.due_date|default_if_none:'' }}">
-            {% for error in form.due_date.errors %}
-                <div class="invalid-feedback">{{ error }}</div>
-            {% endfor %}
-        </div>
+  </div>
+
+  <div class="row my-sm-4 justify-content-center">
+    <label for="{{ form.description.id_for_label }}" class="col-md-2 col-form-label">説明</label>
+    <div class="col-md-6">
+      <textarea
+        name="{{ form.description.name }}"
+        id="{{ form.description.id_for_label }}"
+        class="form-control{% if form.description.errors %} is-invalid{% endif %}"
+        rows="4"
+      >{{ form.description.value|default_if_none:'' }}</textarea>
+      {% for error in form.description.errors %}
+        <div class="invalid-feedback">{{ error }}</div>
+      {% endfor %}
     </div>
-    <div class="row my-sm-4 justify-content-center">
-        <label for="inputPriority" class="col-md-2 col-form-label">優先度</label>
-        <div class="col-md-6">
-            <select name="priority" class="form-control" id="inputPriority">
-                <option value="1" {% if form.data.priority == "1" %}selected{% endif %}>低</option>
-                <option value="2" {% if form.data.priority == "2" %}selected{% endif %}>中</option>
-                <option value="3" {% if form.data.priority == 3 %}selected{% endif %}>高</option>
-            </select>
-        </div>
+  </div>
+
+  <div class="row my-sm-4 justify-content-center">
+    <label for="{{ form.due_date.id_for_label }}" class="col-md-2 col-form-label">期限</label>
+    <div class="col-md-6">
+      <input
+        type="date"
+        name="{{ form.due_date.name }}"
+        id="{{ form.due_date.id_for_label }}"
+        class="form-control{% if form.due_date.errors %} is-invalid{% endif %}"
+        value="{{ form.due_date.value|default_if_none:'' }}"
+      >
+      {% for error in form.due_date.errors %}
+        <div class="invalid-feedback">{{ error }}</div>
+      {% endfor %}
     </div>
-    <div class="row my-sm-4 justify-content-center">
-        <label for="inputCompleted" class="col-md-2 col-form-label">完了</label>
-        <div class="col-md-6">
-            <input type="checkbox"
-                   name="completed"
-                   class="form-check-input"
-                   id="inputCompleted"
-                   {% if form.data.completed %}checked{% endif %}>
-        </div>
+  </div>
+
+  <div class="row my-sm-4 justify-content-center">
+    <label for="{{ form.priority.id_for_label }}" class="col-md-2 col-form-label">優先度</label>
+    <div class="col-md-6">
+      <select
+        name="{{ form.priority.name }}"
+        id="{{ form.priority.id_for_label }}"
+        class="form-select{% if form.priority.errors %} is-invalid{% endif %}"
+      >
+        {% for val, label in form.fields.priority.choices %}
+          {# 文字列化して比較しておくと安全 #}
+          <option value="{{ val }}" {% if form.priority.value|stringformat:"s" == val|stringformat:"s" %}selected{% endif %}>
+            {{ label }}
+          </option>
+        {% endfor %}
+      </select>
+      {% for error in form.priority.errors %}
+        <div class="invalid-feedback">{{ error }}</div>
+      {% endfor %}
     </div>
-    <div class="row my-4 px-0 justify-content-center">
-        <button type="submit" class="col-md-1 mx-md-1 my-1 btn btn-primary btn-lg" >登録</button>
-        <button class="col-md-1 mx-md-1 my-1 btn btn-secondary btn-lg" onclick="window.history.back();return false;">戻る</button>
+  </div>
+
+  <div class="row my-sm-4 justify-content-center">
+    <span class="col-md-2 col-form-label">完了</span>
+    <div class="col-md-6">
+      <div class="form-check">
+        <input
+          type="checkbox"
+          name="{{ form.completed.name }}"
+          id="{{ form.completed.id_for_label }}"
+          class="form-check-input{% if form.completed.errors %} is-invalid{% endif %}"
+          {% if form.completed.value %}checked{% endif %}
+        >
+        <label class="form-check-label" for="{{ form.completed.id_for_label }}">完了にする</label>
+        {% for error in form.completed.errors %}
+          <div class="invalid-feedback d-block">{{ error }}</div>
+        {% endfor %}
+      </div>
     </div>
+  </div>
+
+  <div class="row my-4 px-0 justify-content-center">
+    <button type="submit" class="col-md-2 mx-md-1 my-1 btn btn-primary btn-lg">登録</button>
+    <button type="button" class="col-md-2 mx-md-1 my-1 btn btn-secondary btn-lg" onclick="history.back()">戻る</button>
+  </div>
 </form>
+
 {% endblock content %}

@@ -1,67 +1,36 @@
 {% extends 'base/base.html' %}
-{% block extend_css %}
-{% load static %}
-{% endblock extend_css %}
 {% block content %}
-<p class="text-center mb-4">以下のデータを削除してもよろしいですか？</p>
-<div class="row my-sm-4 justify-content-center">
-    <label for="inputTitle" class="col-md-2 col-form-label">タイトル</label>
-    <div class="col-md-6">
-        <input type="text"
-                name="title"
-                class="form-control"
-                id="inputTitle"
-                value="{{ obj.title}}"
-                disabled>
-    </div>
+<div class="card my-3">
+  <div class="card-header bg-danger-subtle text-danger-emphasis text-center">
+    削除確認
+  </div>
+  <div class="card-body">
+    <p class="text-center mb-4">以下のデータを削除してもよろしいですか？（元に戻せません）</p>
+
+    <dl class="row">
+      <dt class="col-sm-3 text-muted">タイトル</dt>
+      <dd class="col-sm-9">{{ obj.title }}</dd>
+
+      <dt class="col-sm-3 text-muted">説明</dt>
+      <dd class="col-sm-9">{{ obj.description|linebreaksbr|default:"-" }}</dd>
+
+      <dt class="col-sm-3 text-muted">期限</dt>
+      <dd class="col-sm-9">{{ obj.due_date|date:"Y/m/d"|default:"-" }}</dd>
+
+      <dt class="col-sm-3 text-muted">優先度</dt>
+      <dd class="col-sm-9">{{ obj.get_priority_display }}</dd>
+
+      <dt class="col-sm-3 text-muted">完了</dt>
+      <dd class="col-sm-9">{{ obj.completed|yesno:"完了,未完了" }}</dd>
+    </dl>
+
+    <form method="post" action="{% url 'todo:task_delete' obj.pk %}">
+      {% csrf_token %}
+      <div class="d-flex gap-2 justify-content-center mt-4">
+        <button type="submit" class="btn btn-danger btn-lg">削除</button>
+        <a href="{% url 'todo:task_detail' obj.pk %}" class="btn btn-outline-secondary btn-lg">戻る</a>
+      </div>
+    </form>
+  </div>
 </div>
-<div class="row my-sm-4 justify-content-center">
-    <label for="inputDescription" class="col-md-2 col-form-label">説明</label>
-    <div class="col-md-6">
-        <textarea name="description"
-                    class="form-control"
-                    id="inputDescription"
-                    disabled>{{ obj.description}}
-        </textarea>
-    </div>
-</div>
-<div class="row my-sm-4 justify-content-center">
-    <label for="inputDueDate" class="col-md-2 col-form-label">期限</label>
-    <div class="col-md-6">
-        <input type="date"
-                name="due_date"
-                class="form-control{% if form.due_date.errors %} is-invalid{% endif %}"
-                id="inputDueDate"
-                value="{{ obj.due_date|date:'Y-m-d' }}"
-                disabled>
-    </div>
-</div>
-<div class="row my-sm-4 justify-content-center">
-    <label for="inputPriority" class="col-md-2 col-form-label">優先度</label>
-    <div class="col-md-6">
-        <select name="priority" class="form-control" id="inputPriority" disabled>
-            <option value="1" {% if obj.priority == "1" %}selected{% endif %}>低</option>
-            <option value="2" {% if obj.priority == "2" %}selected{% endif %}>中</option>
-            <option value="3" {% if obj.priority == 3 %}selected{% endif %}>高</option>
-        </select>
-    </div>
-</div>
-<div class="row my-sm-4 justify-content-center">
-    <label for="inputCompleted" class="col-md-2 col-form-label">完了</label>
-    <div class="col-md-6">
-        <input type="checkbox"
-                name="completed"
-                class="form-check-input"
-                id="inputCompleted"
-                {% if obj.completed %}checked{% endif %}
-                disabled>
-    </div>
-</div>
-<form method="POST">
-    {% csrf_token %}
-    <div class="row my-5 px-0 justify-content-center">
-        <button type="submit" class="col-sm-1 mx-sm-3 my-1 btn btn-primary btn-lg">削除</button>
-        <a class="col-sm-1 mx-sm-3 my-1 btn btn-secondary btn-lg" onclick="window.history.back();">戻る</a>
-    </div>
-</form>
 {% endblock content %}
