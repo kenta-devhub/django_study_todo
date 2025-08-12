@@ -2469,3 +2469,306 @@ Traceback (most recent call last):
   File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 228, in do_block
     raise TemplateSyntaxError(
 django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'content' appears more than once
+[INFO] 2025-08-11 15:54:13,028 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-11 15:54:21,262 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-11 16:06:46,764 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 16:07:25,852 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 16:16:44,642 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-11 16:17:03,469 django.request: Internal Server Error: /todo/kanban/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 567, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 9: 'endfor', expected 'endblock'. Did you forget to register or load this tag?
+[ERROR] 2025-08-11 16:17:26,130 django.request: Internal Server Error: /todo/kanban/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 861, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 682, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse some characters: |("todo","ToDo")||make_list
+[WARNING] 2025-08-11 16:17:52,337 django.request: Not Found: /todo/alendar/
+[WARNING] 2025-08-11 16:18:05,386 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 16:18:16,264 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 16:18:16,939 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 16:18:17,678 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 16:18:18,052 django.request: Not Found: /api/tasks/events/
+[ERROR] 2025-08-11 16:18:44,485 django.request: Internal Server Error: /todo/kanban/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 861, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 609, in compile_filter
+    return FilterExpression(token, self)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 682, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse some characters: |("todo","ToDo")||make_list
+[INFO] 2025-08-11 18:00:51,570 django.utils.autoreload: /home/ken/study/django/todo/config/settings.py changed, reloading.
+[INFO] 2025-08-11 18:00:55,891 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 18:01:16,496 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-11 18:01:18,967 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 18:01:40,135 django.utils.autoreload: /home/ken/study/django/todo/todo/api_views.py changed, reloading.
+[INFO] 2025-08-11 18:01:42,355 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 18:02:14,873 django.utils.autoreload: /home/ken/study/django/todo/config/settings.py changed, reloading.
+[INFO] 2025-08-11 18:02:15,925 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 18:02:46,353 django.utils.autoreload: /home/ken/study/django/todo/todo/models/task.py changed, reloading.
+[INFO] 2025-08-11 18:02:48,339 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 18:03:01,913 django.utils.autoreload: /home/ken/study/django/todo/todo/models/task.py changed, reloading.
+[INFO] 2025-08-11 18:03:02,921 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 18:03:34,627 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-11 18:03:38,295 django.request: Internal Server Error: /todo/kanban/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/mixins.py", line 73, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 228, in get
+    context = self.get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/todo/views/task.py", line 214, in get_context_data
+    columns = getattr(settings, "KANBAN_COLUMNS", None)
+NameError: name 'settings' is not defined
+[INFO] 2025-08-11 18:04:13,921 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-11 18:04:15,120 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 18:04:16,912 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-11 18:04:17,838 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-11 18:04:20,080 django.request: Internal Server Error: /todo/kanban/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/base.py", line 749, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/template/defaultfilters.py", line 852, in divisibleby
+    return int(value) % int(arg) == 0
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
+[WARNING] 2025-08-11 18:08:20,228 django.request: Not Found: /api/tasks/events/
+[INFO] 2025-08-11 19:10:32,915 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 19:18:27,129 django.utils.autoreload: /home/ken/study/django/todo/todo/views/task.py changed, reloading.
+[INFO] 2025-08-11 19:18:28,479 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 19:19:57,013 django.utils.autoreload: /home/ken/study/django/todo/todo/serializers.py changed, reloading.
+[INFO] 2025-08-11 19:19:58,640 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 19:21:31,654 django.utils.autoreload: /home/ken/study/django/todo/todo/api_views.py changed, reloading.
+[INFO] 2025-08-11 19:21:33,124 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-11 19:22:14,106 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 21:02:56,711 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 21:03:06,168 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 21:03:09,354 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 21:03:09,828 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 21:03:10,259 django.request: Not Found: /api/tasks/events/
+[ERROR] 2025-08-11 21:11:45,473 todo.views.task: Task create form invalid errors={'due_date': ['期限は今日以降の日付を指定してください。']}
+[WARNING] 2025-08-11 21:43:56,053 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 21:45:00,241 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[INFO] 2025-08-11 21:49:23,242 django.utils.autoreload: /home/ken/study/django/todo/todo/api_views.py changed, reloading.
+[INFO] 2025-08-11 21:49:26,258 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 21:49:28,291 django.utils.autoreload: /home/ken/study/django/todo/todo/api_views.py changed, reloading.
+[INFO] 2025-08-11 21:49:29,966 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 21:49:33,326 django.utils.autoreload: /home/ken/study/django/todo/todo/api_views.py changed, reloading.
+[INFO] 2025-08-11 21:49:35,132 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 21:49:44,837 django.utils.autoreload: /home/ken/study/django/todo/todo/api_views.py changed, reloading.
+[INFO] 2025-08-11 21:49:46,510 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-11 21:50:08,737 django.utils.autoreload: /home/ken/study/django/todo/todo/api_views.py changed, reloading.
+[INFO] 2025-08-11 21:50:09,822 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-11 21:52:48,524 django.request: Method Not Allowed: /api/tasks/10/status/
+[WARNING] 2025-08-11 22:03:22,958 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 22:06:57,318 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 22:23:42,808 django.request: Not Found: /api/task/event/
+[WARNING] 2025-08-11 22:23:51,541 django.request: Not Found: /api/tasks/event/
+[WARNING] 2025-08-11 22:24:18,502 django.request: Not Found: /api/tasks/events/
+[INFO] 2025-08-11 22:52:59,363 django.utils.autoreload: /home/ken/study/django/todo/config/urls.py changed, reloading.
+[INFO] 2025-08-11 22:53:00,355 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-11 22:53:04,183 django.request: Not Found: /api/tasks/events/
+[WARNING] 2025-08-11 22:54:09,187 django.request: Not Found: /api/tasks/events/
+[INFO] 2025-08-12 09:42:16,787 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 09:44:56,786 django.utils.autoreload: /home/ken/study/django/todo/config/urls.py changed, reloading.
+[INFO] 2025-08-12 09:44:57,255 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-12 09:45:35,413 django.request: Not Found: /favicon.ico
+[WARNING] 2025-08-12 09:45:45,369 django.request: Not Found: /todo/1/detail/
+[WARNING] 2025-08-12 09:45:50,013 django.request: Not Found: /todo/1/detail/
+[WARNING] 2025-08-12 09:46:16,757 django.request: Not Found: /todo/9/detail/
+[WARNING] 2025-08-12 09:46:27,493 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[WARNING] 2025-08-12 09:46:34,324 django.request: Not Found: /todo/10/detail/
+[WARNING] 2025-08-12 09:46:34,459 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[WARNING] 2025-08-12 09:46:40,645 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[WARNING] 2025-08-12 09:46:40,679 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[INFO] 2025-08-12 09:48:43,023 django.utils.autoreload: /home/ken/study/django/todo/todo/api_views.py changed, reloading.
+[INFO] 2025-08-12 09:48:43,845 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-12 09:48:46,191 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[WARNING] 2025-08-12 09:48:48,322 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json

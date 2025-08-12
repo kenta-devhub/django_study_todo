@@ -72,9 +72,11 @@
 </div>
 
 <!-- 右上：新規作成 -->
-<div class="d-flex flex-wrap gap-2 align-items-center mb-3">
-  <a href="{% url 'todo:task_create' %}" class="btn btn-primary btn-sm ms-auto">新規作成</a>
+<div class="d-flex flex-column flex-sm-row gap-2 justify-content-sm-end mb-3">
+  <a href="{% url 'todo:task_create' %}" class="btn btn-primary btn-sm">新規作成</a>
+  <a href="{% url 'todo:task_calendar' %}" class="btn btn-success btn-sm">カレンダー</a>
 </div>
+
 
 {# 以下、あなたのカード一覧（そのまま） #}
 {% with items=tasks|default:obj %}
@@ -115,6 +117,8 @@
                 {% else %}
                   <span class="badge text-bg-warning-subtle text-warning-emphasis">未完了</span>
                 {% endif %}
+                <span class="badge text-bg-light border">{{ t.status }}</span>
+
                 <span class="badge text-bg-light border">
                   登録: {{ t.created_at|date:"Y/m/d H:i" }}
                 </span>

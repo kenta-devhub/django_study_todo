@@ -192,3 +192,22 @@ LOGGING = {
         'level': 'INFO',
     },
 }
+
+INSTALLED_APPS += [
+    "rest_framework",
+]
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.IsAuthenticated"],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
+    ],
+}
+
+
+KANBAN_COLUMNS = [
+    ("todo", "ToDo"),
+    ("doing", "進行中"),
+    ("blocked", "保留"),  # ← 追加
+    ("done", "完了"),
+]
