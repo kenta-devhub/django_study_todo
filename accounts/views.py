@@ -1,7 +1,7 @@
 from django.views.generic import CreateView
 from django.contrib.auth.views import LoginView
 from django.contrib import messages
-from .forms import UserCreationForm, EmailAuthenticationForm  # type: ignore
+from .forms import CustomUserCreationForm, EmailAuthenticationForm  # type: ignore
 from django.urls import reverse_lazy
 
 
@@ -27,9 +27,9 @@ class Login(LoginView):
 
 
 class SignUp(CreateView):
-    form_class = UserCreationForm
+    form_class = CustomUserCreationForm
     template_name = "accounts/login.html"
-    success_url = reverse_lazy("login")
+    success_url = reverse_lazy("login")  # 登録後のリダイレクト先
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

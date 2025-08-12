@@ -2772,3 +2772,212 @@ TypeError: int() argument must be a string, a bytes-like object or a real number
 [INFO] 2025-08-12 09:48:43,845 django.utils.autoreload: Watching for file changes with StatReloader
 [WARNING] 2025-08-12 09:48:46,191 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
 [WARNING] 2025-08-12 09:48:48,322 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[INFO] 2025-08-12 11:04:49,172 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-12 11:05:03,322 django.request: Not Found: /favicon.ico
+[INFO] 2025-08-12 11:06:26,811 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:06:27,732 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:06:32,297 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:06:32,771 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:07:30,418 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:07:31,103 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-12 11:08:03,543 django.request: Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/ken/study/django/todo/accounts/views.py", line 43, in form_valid
+    return super().form_valid(form)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 134, in form_valid
+    return super().form_valid(form)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 63, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 119, in get_success_url
+    if self.success_url:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/functional.py", line 187, in __wrapper__
+    result = func(*self._args, **self._kw)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'todo' not found. 'todo' is not a valid view function or pattern name.
+[INFO] 2025-08-12 11:08:11,275 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:08:12,409 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-12 11:08:37,753 django.request: Not Found: /todo/task_list/
+[INFO] 2025-08-12 11:09:18,019 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:09:18,491 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-12 11:10:37,690 django.request: Not Found: /todo/
+[INFO] 2025-08-12 11:18:05,147 django.utils.autoreload: /home/ken/study/django/todo/accounts/models.py changed, reloading.
+[INFO] 2025-08-12 11:18:05,848 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:20:16,788 django.utils.autoreload: /home/ken/study/django/todo/accounts/models.py changed, reloading.
+[INFO] 2025-08-12 11:20:17,617 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:20:39,345 django.utils.autoreload: /home/ken/study/django/todo/accounts/models.py changed, reloading.
+[INFO] 2025-08-12 11:20:39,916 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:23:00,325 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:23:37,171 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:23:38,174 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:24:17,459 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:24:18,324 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:24:35,288 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:24:36,581 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:25:50,786 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:25:51,726 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:26:27,532 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:26:29,576 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:26:35,592 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:26:36,404 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:26:47,098 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:26:47,768 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:26:53,411 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:26:53,989 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:27:02,507 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:27:03,517 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:27:04,831 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:27:05,610 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:27:09,850 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:27:10,398 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:27:16,008 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:27:16,766 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:27:21,562 django.utils.autoreload: /home/ken/study/django/todo/accounts/admin.py changed, reloading.
+[INFO] 2025-08-12 11:27:22,512 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:35:12,559 django.utils.autoreload: /home/ken/study/django/todo/accounts/forms.py changed, reloading.
+[INFO] 2025-08-12 11:35:13,487 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:36:04,932 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:36:06,482 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:36:09,146 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:36:10,935 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:36:20,600 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:36:21,489 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:36:28,983 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:36:29,868 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:36:32,615 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:36:33,422 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-12 11:36:43,733 django.request: Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ken/study/django/todo/accounts/views.py", line 16, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 72, in get_context_data
+    kwargs["form"] = self.get_form()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 37, in get_form
+    return form_class(**self.get_form_kwargs())
+TypeError: BaseModelForm.__init__() got an unexpected keyword argument 'request'
+[INFO] 2025-08-12 11:36:54,650 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:36:55,397 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:36:57,698 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:36:58,289 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:37:07,889 django.utils.autoreload: /home/ken/study/django/todo/accounts/forms.py changed, reloading.
+[INFO] 2025-08-12 11:37:08,676 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:37:28,854 django.utils.autoreload: /home/ken/study/django/todo/accounts/forms.py changed, reloading.
+[INFO] 2025-08-12 11:37:29,695 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:37:48,443 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:37:49,701 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:37:54,429 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:37:55,277 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:37:58,633 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:38:00,196 django.utils.autoreload: Watching for file changes with StatReloader
+[ERROR] 2025-08-12 11:38:01,160 django.request: Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ken/study/django/todo/accounts/views.py", line 16, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 72, in get_context_data
+    kwargs["form"] = self.get_form()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 37, in get_form
+    return form_class(**self.get_form_kwargs())
+TypeError: BaseModelForm.__init__() got an unexpected keyword argument 'request'
+[INFO] 2025-08-12 11:38:40,070 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:38:41,057 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:38:43,630 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:38:44,484 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:38:59,992 django.utils.autoreload: /home/ken/study/django/todo/accounts/forms.py changed, reloading.
+[INFO] 2025-08-12 11:39:00,579 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:39:17,313 django.utils.autoreload: /home/ken/study/django/todo/accounts/forms.py changed, reloading.
+[INFO] 2025-08-12 11:39:18,230 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:39:24,738 django.utils.autoreload: /home/ken/study/django/todo/accounts/forms.py changed, reloading.
+[INFO] 2025-08-12 11:39:25,366 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:39:28,792 django.utils.autoreload: /home/ken/study/django/todo/accounts/forms.py changed, reloading.
+[INFO] 2025-08-12 11:39:29,550 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:39:32,993 django.utils.autoreload: /home/ken/study/django/todo/accounts/forms.py changed, reloading.
+[INFO] 2025-08-12 11:39:33,628 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:39:49,141 django.utils.autoreload: /home/ken/study/django/todo/accounts/forms.py changed, reloading.
+[INFO] 2025-08-12 11:39:49,757 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:40:00,627 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:40:02,020 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:40:04,468 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:40:05,143 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:40:08,840 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:40:09,717 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:40:13,085 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:40:13,824 django.utils.autoreload: Watching for file changes with StatReloader
+[INFO] 2025-08-12 11:40:17,360 django.utils.autoreload: /home/ken/study/django/todo/accounts/views.py changed, reloading.
+[INFO] 2025-08-12 11:40:18,326 django.utils.autoreload: Watching for file changes with StatReloader
+[WARNING] 2025-08-12 11:47:08,818 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[WARNING] 2025-08-12 11:47:23,638 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json
+[WARNING] 2025-08-12 11:48:08,207 django.request: Not Found: /.well-known/appspecific/com.chrome.devtools.json

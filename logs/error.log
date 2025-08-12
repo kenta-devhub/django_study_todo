@@ -2402,3 +2402,110 @@ Traceback (most recent call last):
     return int(value) % int(arg) == 0
 TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
 [ERROR] 2025-08-11 21:11:45,473 todo.views.task: Task create form invalid errors={'due_date': ['期限は今日以降の日付を指定してください。']}
+[ERROR] 2025-08-12 11:08:03,543 django.request: Internal Server Error: /signup/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 182, in post
+    return super().post(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 151, in post
+    return self.form_valid(form)
+  File "/home/ken/study/django/todo/accounts/views.py", line 43, in form_valid
+    return super().form_valid(form)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 134, in form_valid
+    return super().form_valid(form)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 63, in form_valid
+    return HttpResponseRedirect(self.get_success_url())
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 119, in get_success_url
+    if self.success_url:
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/functional.py", line 187, in __wrapper__
+    result = func(*self._args, **self._kw)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'todo' not found. 'todo' is not a valid view function or pattern name.
+[ERROR] 2025-08-12 11:36:43,733 django.request: Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ken/study/django/todo/accounts/views.py", line 16, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 72, in get_context_data
+    kwargs["form"] = self.get_form()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 37, in get_form
+    return form_class(**self.get_form_kwargs())
+TypeError: BaseModelForm.__init__() got an unexpected keyword argument 'request'
+[ERROR] 2025-08-12 11:38:01,160 django.request: Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 142, in get
+    return self.render_to_response(self.get_context_data())
+  File "/home/ken/study/django/todo/accounts/views.py", line 16, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/contrib/auth/views.py", line 112, in get_context_data
+    context = super().get_context_data(**kwargs)
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 72, in get_context_data
+    kwargs["form"] = self.get_form()
+  File "/home/ken/study/django/todo/venv/lib/python3.10/site-packages/django/views/generic/edit.py", line 37, in get_form
+    return form_class(**self.get_form_kwargs())
+TypeError: BaseModelForm.__init__() got an unexpected keyword argument 'request'
