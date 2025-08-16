@@ -1,41 +1,70 @@
 # Django Todo Application
 
-これはDjangoで構築された、かんばんボードスタイルのTodo管理アプリケーションです。
+これはDjangoとDjango REST Frameworkで構築された、かんばんボードスタイルの高機能なTodo管理アプリケーションです。
+タスクのリアルタイム更新通知機能や、変更履歴の完全な追跡機能を備えています。
 
 ## 概要
 
 ユーザーはタスクを作成し、そのステータスを「ToDo」「進行中」「保留」「完了」の4つのカラムで管理できます。タスクの変更履歴は自動的に記録されます。
-また、Django REST Frameworkを利用したREST APIも提供しており、外部アプリケーションとの連携も可能です。
+
+`django-simple-history`による変更履歴の自動記録機能により、誰がいつタスクを更新したかを追跡できます。
+さらに、Server-Sent Events (SSE) を利用したリアルタイム通知APIにより、タスクの変更が他のユーザーの画面にも即座に反映されるようなインタラクティブな体験を実現できます。
 
 ## 主な機能
 
 -   **ユーザー認証**: サインアップ、ログイン、ログアウト機能
 -   **タスク管理 (CRUD)**: タスクの作成、閲覧、更新、削除
--   **かんばんボード表示**: タスクをステータスごとに管理 (`todo`, `doing`, `blocked`, `done`)
--   **タスク履歴**: `django-simple-history`による変更履歴の自動記録
--   **REST API**: タスク情報をJSON形式で操作するためのAPIエンドポイント
+-   **かんばんボード表示**: ステータス (`todo`, `doing`, `blocked`, `done`) ごとのタスク管理
+-   **タスク履歴**: `django-simple-history`による変更履歴の完全な自動記録
+-   **REST API**: 外部アプリケーションと連携するための豊富なAPIエンドポイント
+-   **リアルタイム更新**: Server-Sent Events (SSE) によるタスク変更のリアルタイム通知
 
-## 技術スタック
++## ディレクトリ構造
+
+```
+.
+├── tasks/            # Todoアプリケーションのコアロジック
+│   ├── migrations/
+│   ├── templates/
+│   ├── admin.py
+│   ├── models.py     # TaskモデルとHistoricalTaskモデル
+│   ├── views.py      # ビュー（かんばんボード、API、SSE）
+│   ├── urls.py
+│   └── serializers.py  # DRF用のシリアライザー
+├── config/           # プロジェクト全体の設定
+│   ├── settings.py   # 環境変数を読み込む設定
+│   └── urls.py       # プロジェクト全体のURLルーティング
+├── secrets/
+│   └── .env.dev      # 開発用の環境変数ファイル
+├── manage.py         # Django管理コマンド
+└── requirements.txt  # 依存パッケージリスト
+```
+
+## 技術スタックと選定理由
 
 -   **バックエンド**: Python, Django
 -   **データベース**: MySQL
 -   **API**: Django REST Framework
 -   **環境変数管理**: django-environ
+-   **環境変数管理**: `django-environ`
+    -   理由: `settings.py`からデータベース接続情報などの機密情報を分離し、安全に管理するため。
 -   **履歴管理**: django-simple-history
+-   **履歴管理**: `django-simple-history`
+    -   理由: モデルへの変更履歴を自動的にデータベースに保存し、監査やデバッグを容易にするため。
 
 ## セットアップ手順
 
 ### 1. 前提条件
 
 -   Python 3.x
--   pip
 -   MySQL Server
+-   Git
 
 ### 2. リポジトリのクローン
 
 ```bash
 git clone <your-repository-url>
-cd <repository-name>
+cd todo
 ```
 
 ### 3. 依存関係のインストール
