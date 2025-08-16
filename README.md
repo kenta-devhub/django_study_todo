@@ -1,99 +1,135 @@
-# Django ToDoアプリケーション
+# Django Todo Application
 
-Djangoで構築されたシンプルなToDo管理アプリケーションです。
+これはDjangoで構築された、かんばんボードスタイルのTodo管理アプリケーションです。
 
-このアプリケーションは、タスクの基本的なCRUD（作成、読み取り、更新、削除）機能を提供します。また、`django-simple-history`を利用して、各タスクへの変更履歴を記録・表示する機能を備えています。
+## 概要
+
+ユーザーはタスクを作成し、そのステータスを「ToDo」「進行中」「保留」「完了」の4つのカラムで管理できます。タスクの変更履歴は自動的に記録されます。
+また、Django REST Frameworkを利用したREST APIも提供しており、外部アプリケーションとの連携も可能です。
 
 ## 主な機能
 
-- **タスク管理 (CRUD)**
-  - タスクの新規作成
-  - タスクの一覧表示
-  - タスクの詳細表示
-  - タスクの更新
-  - タスクの削除
-- **タスクの属性**
-  - タイトル
-  - 説明
-  - 期限
-  - 優先度（高、中、低）
-  - 完了ステータス
-- **変更履歴**
-  - 各タスクの作成、更新日時、更新者、変更内容を記録
-  - 変更履歴をタスク詳細ページに表示
+-   **ユーザー認証**: サインアップ、ログイン、ログアウト機能
+-   **タスク管理 (CRUD)**: タスクの作成、閲覧、更新、削除
+-   **かんばんボード表示**: タスクをステータスごとに管理 (`todo`, `doing`, `blocked`, `done`)
+-   **タスク履歴**: `django-simple-history`による変更履歴の自動記録
+-   **REST API**: タスク情報をJSON形式で操作するためのAPIエンドポイント
 
-## 使用技術
+## 技術スタック
 
-- **バックエンド:** Python, Django
-- **フロントエンド:** HTML, CSS, Bootstrap
-- **データベース:** SQLite3 (Djangoデフォルト)
-- **その他ライブラリ:**
-  - `django-simple-history`: モデルの変更履歴を追跡
-
-## ディレクトリ構成
-
-```
-todo/
-├── manage.py          # Djangoプロジェクト管理用スクリプト
-├── todo/              # プロジェクト設定ディレクトリ
-│   ├── settings.py    # プロジェクト設定ファイル
-│   └── urls.py        # プロジェクト全体のURL設定
-├── tasks/             # ToDoアプリケーションディレクトリ
-│   ├── models      # データモデル定義
-│   ├── views       # ビュー（ロジック）定義
-│   ├── forms       # フォーム定義
-│   ├── urls.py        # アプリケーションのURL設定
-│   ├── admin.py       # Django管理サイトの設定
-│   ├── templates/     # HTMLテンプレート
-│   │   └── tasks/
-│   │       ├── base.html, task_list.html, task_detail.html, etc.
-│   └── migrations/    # データベーススキーマの変更履歴
-└── README.md          # このファイル
-```
+-   **バックエンド**: Python, Django
+-   **データベース**: MySQL
+-   **API**: Django REST Framework
+-   **環境変数管理**: django-environ
+-   **履歴管理**: django-simple-history
 
 ## セットアップ手順
 
 ### 1. 前提条件
 
-- Python 3.8以上
-- pip
+-   Python 3.x
+-   pip
+-   MySQL Server
 
-### 2. インストール
+### 2. リポジトリのクローン
 
-1.  **リポジトリをクローンします。**
-    ```bash
-    git clone <your-repository-url>
-    cd todo
-    ```
+```bash
+git clone <your-repository-url>
+cd <repository-name>
+```
 
-2.  **Python仮想環境を作成し、有効化します。**
-    ```bash
-    python -m venv venv
-    # Windowsの場合
-    # venv\Scripts\activate
-    # macOS/Linuxの場合
-    source venv/bin/activate
-    ```
+### 3. 依存関係のインストール
 
-3.  **必要なパッケージをインストールします。**
-    *(注: `requirements.txt` がない場合は、以下のコマンドで主要なライブラリをインストールしてください)*
-    ```bash
-    pip install Django django-simple-history
-    ```
+このプロジェクトには`requirements.txt`が含まれていない可能性があります。もしない場合は、以下のコマンドで現在の環境のライブラリを元に作成してください。
 
-4.  **データベースのマイグレーションを実行します。**
-    ```bash
-    python manage.py migrate
-    ```
+```bash
+pip freeze > requirements.txt
+```
 
-5.  **管理者ユーザーを作成します。**
-    ```bash
-    python manage.py createsuperuser
-    ```
+次に、仮想環境を作成し、依存ライブラリをインストールします。
 
-6.  **開発サーバーを起動します。**
-    ```bash
-    python manage.py runserver
-    ```
+```bash
+python -m venv venv
+source venv/bin/activate  # for Linux/macOS
+# venv\Scripts\activate    # for Windows
 
-7.  ブラウザで `http://127.0.0.1:8000/` にアクセスしてアプリケーションを確認します。
+pip install -r requirements.txt
+```
+
+### 4. 環境変数の設定
+
+プロジェクトルートに`secrets`ディレクトリを作成し、その中に`.env.dev`ファイルを作成します。
+
+```bash
+mkdir secrets
+touch secrets/.env.dev
+```
+
+`.env.dev`ファイルに以下の内容を記述し、ご自身の環境に合わせて値を設定してください。
+
+```dotenv
+# .env.dev
+
+# Django
+SECRET_KEY='your-very-long-and-secure-secret-key'
+ALLOWED_HOSTS=localhost,127.0.0.1
+
+# Database (MySQL)
+MYSQL_NAME=todo_db
+MYSQL_USER=todo_user
+MYSQL_PASSWORD=your_db_password
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+```
+
+`SECRET_KEY`は以下のコマンドで安全なキーを生成できます。
+
+```python
+python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'
+```
+
+### 5. データベースのセットアップ
+
+MySQLに接続し、`.env.dev`で設定したデータベースを作成します。
+
+```sql
+CREATE DATABASE todo_db CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+```
+
+### 6. マイグレーションの実行
+
+Djangoのマイグレーションを実行して、データベースにテーブルを作成します。
+
+```bash
+python manage.py migrate
+```
+
+### 7. 管理者ユーザーの作成
+
+管理サイトにログインするためのスーパーユーザーを作成します。
+
+```bash
+python manage.py createsuperuser
+```
+
+### 8. 開発サーバーの起動
+
+以下のコマンドで開発サーバーを起動します。
+
+```bash
+python manage.py runserver
+```
+
+ブラウザで `http://127.0.0.1:8000/` にアクセスすると、アプリケーションが表示されます。
+管理サイトは `http://127.0.0.1:8000/admin/` です。
+
+## APIエンドポイント
+
+認証（セッション認証）が必要です。
+
+-   `GET /api/tasks/`: タスク一覧を取得
+-   `POST /api/tasks/`: 新しいタスクを作成
+-   `GET /api/tasks/<id>/`: 特定のタスクの詳細を取得
+-   `PUT/PATCH /api/tasks/<id>/`: 特定のタスクを更新
+-   `DELETE /api/tasks/<id>/`: 特定のタスクを削除
+-   `GET /api/tasks/events/`: タスクの変更イベントをストリーミング (Server-Sent Events)
